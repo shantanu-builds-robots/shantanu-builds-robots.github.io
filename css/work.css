@@ -24,7 +24,7 @@
     overflow: hidden;
     background-color: black; /* Background for the dark side */
     opacity: 0;
-    transform: translateX(-100px); /* Start slightly off-screen */
+    transform: translateX(-500px); /* Start slightly off-screen */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -32,7 +32,7 @@
 .work-card.reverse {
     justify-content: flex-end;
     background-position: center left; /* Image on the left for right-aligned text */
-    transform: translateX(100px); /* Start slightly off-screen in opposite direction */
+    transform: translateX(500px); /* Start slightly off-screen in opposite direction */
 }
 
 

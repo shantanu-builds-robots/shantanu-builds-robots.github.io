@@ -41,7 +41,18 @@
     flex-direction: column;
     justify-content: space-between;
     height: 600px; /* Consistent card height */
+    opacity: 0; 
+    transform: translateY(-200px); /*Start slightly below its final position */
+    transition: opacity 0.5s ease, transform 1.0s ease; /* Animation effect */
+
 }
+
+/* When in view, add an "in-view" class to make the card visible and reset position */
+.blog-card.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Slide into position */
+}
+
 
 .blog-card .date {
     font-size: 0.9rem;

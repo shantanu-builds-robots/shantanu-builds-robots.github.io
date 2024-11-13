@@ -7,7 +7,6 @@
 .education-cards {
     width: 100%;
 }
-
 /* Education Card Styling */
 .education-card {
     display: flex;
@@ -22,12 +21,22 @@
     background-position: center right; /* Image on the right for left-aligned text */
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(-500px); /* Start slightly off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Reverse the layout for alternating cards */
 .education-card.reverse {
     justify-content: flex-end;
     background-position: center left; /* Image on the left for right-aligned text */
+    transform: translateX(500px); /* Start slightly off-screen in opposite direction */
+}
+
+/* Class to slide in when in view */
+.education-card.in-view {
+    opacity: 1;
+    transform: translateX(0); /* Slide into view */
 }
 
 /* Gradient Overlay */
