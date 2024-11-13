@@ -238,12 +238,37 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+
 /* Modal Links */
 .modal .links a {
-    margin-top: 0.469rem; /* Reduced by 25% from 0.625rem */
-    padding: 0.469rem 0.938rem; /* Reduced by 25% from 0.625rem 1.25rem */
-    font-size: 0.7rem; /* Reduced by 25% from 0.75rem */
-    border-radius: 0.375rem; /* Reduced by 25% from 0.5rem */
+    display: inline-block;
+    background-color: var(--navbar-bg-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 0.6em 0.938rem; /* Reduced from 0.625rem 1.25rem */
+    margin: 0.6rem 0; /* Reduced from 0.625rem 0 */
+    border-radius: 0.375rem; /* Reduced from 0.5rem */
+    text-decoration: none;
+    border: 0.094rem solid var(--secondary-color); /* Reduced from 0.125rem */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem; /* Reduced from 0.5rem */
+    font-size: 0.8rem;
+}
+
+/* Add a GitHub icon before the text */
+.modal .links a i {
+    font-size: 0.3rem; /* Reduced from 0.75rem */
+    color: var(--secondary-color);
+}
+
+/* Hover Effects */
+.modal .links a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0.469rem var(--secondary-color); /* Reduced from 0.625rem */
+    cursor: pointer;
 }
 
 /* View Article Button */
@@ -275,8 +300,8 @@
     background-color: var(--list-color);
     color: var(--secondary-color);
     border-radius: 0.563rem; /* Reduced from 0.75rem */
-    padding: 0.234rem 0.563rem; /* Reduced from 0.313rem 0.75rem */
-    font-size: 0.656rem; /* Reduced from 0.875rem */
+    padding: 0.3rem 0.563rem; /* Reduced from 0.313rem 0.75rem */
+    font-size: 0.7rem; /* Reduced from 0.875rem */
     font-weight: 500;
     border: 0.047rem solid var(--list-color-dark); /* Reduced from 0.063rem */
     transition: background-color 0.3s ease, color 0.3s ease;

@@ -158,7 +158,7 @@
       "title": "Swarm Robotics: Firefly Algorithm",
       "image": "images/project/firefly.png",
       "description": "Implemented a bio-inspired Firefly algorithm for swarm robotics in a Gazebo simulation using ROS2, enabling object identification and collaborative decision-making.",
-      "tags": ["ROS2", "C++", "OpenCV", "Firefly Algorithm", "Swarm Intelligence"],
+      "tags": ["ROS2", "C++", "OpenCV", "Firefly Algorithm"],
       "github": "https://github.com/shantanuparabumd/firefly_swarm",
       "video": "",
       "date": "October 2023",
