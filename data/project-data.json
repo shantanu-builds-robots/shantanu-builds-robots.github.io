@@ -134,7 +134,7 @@
       "title": "3D Vision - Point Cloud Classification and NeRF Modeling",
       "image": "images/project/lego.gif",
       "description": "Explored advanced 3D vision techniques for point cloud classification using PointNet and 3D model generation using NeRF.",
-      "tags": ["Python", "PointNet", "NeRF", "3D Vision", "Computer Vision", "Machine Learning"],
+      "tags": ["Python", "PointNet", "NeRF", "3D Vision", "Computer Vision"],
       "github": "https://github.com/shantanuparabumd/assignment3_sparab",
       "video": "",
       "date": "February 2023",

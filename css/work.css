@@ -1,6 +1,6 @@
 /* Work Experience Section */
 #work-experience {
-    padding: 20px;
+    padding: 0.938rem; /* Reduced by 25% from 1.25rem */
 }
 
 /* Work Cards Container */
@@ -14,32 +14,31 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 550px;
-    margin: 30px 0;
-    border-radius: 15px;
-    background-size: contain; /* Adjust to contain logo size */
+    height: 25.781rem; /* Reduced by 25% from 34.375rem */
+    margin: 1.406rem 0; /* Reduced by 25% from 1.875rem */
+    border-radius: 0.703rem; /* Reduced by 25% from 0.938rem */
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center right; /* Image on the right for left-aligned text */
+    background-position: center right;
     position: relative;
     overflow: hidden;
-    background-color: black; /* Background for the dark side */
+    background-color: black;
     opacity: 0;
-    transform: translateX(-500px); /* Start slightly off-screen */
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-23.438rem); /* Reduced by 25% from -31.25rem */
+    transition: opacity 0.5s ease, transform 1.0s ease;
 }
 
 /* Reverse the layout for alternating cards */
 .work-card.reverse {
     justify-content: flex-end;
-    background-position: center left; /* Image on the left for right-aligned text */
-    transform: translateX(500px); /* Start slightly off-screen in opposite direction */
+    background-position: center left;
+    transform: translateX(23.438rem); /* Reduced by 25% from 31.25rem */
 }
-
 
 /* Class to slide in when in view */
 .work-card.in-view {
     opacity: 1;
-    transform: translateX(0); /* Slide into view */
+    transform: translateX(0);
 }
 
 /* Gradient Overlay */
@@ -50,65 +49,63 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradient from left to right */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     z-index: 1;
 }
 
 .work-card.reverse::before {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradient from right to left */
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
 /* Work Info */
 .work-info-left, .work-info-right {
     position: relative;
-    z-index: 2; /* Content above gradient */
-    padding: 30px;
-    width: 50%; /* Text takes 50% of the card */
-    color: var(--text-color); /* White text */
+    z-index: 2;
+    padding: 1.406rem; /* Reduced by 25% from 1.875rem */
+    width: 50%;
+    color: var(--text-color);
 }
 
 .work-info-left h3, .work-info-right h3 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: var(--secondary-color); /* Neon pink */
+    font-size: 1.875rem; /* Reduced by 25% from 2.5rem */
+    margin-bottom: 0.469rem; /* Reduced by 25% from 0.625rem */
+    color: var(--secondary-color);
 }
-
 
 .work-info-left p, .work-info-right p {
-    font-size: 24px;
+    font-size: 1.125rem; /* Reduced by 25% from 1.5rem */
 }
 
-
 .job-title {
-    color: var(--primary-color); /* Apply the primary color to job titles */
+    color: var(--primary-color);
     font-weight: bold;
-    font-size: 18px;
-    margin: 5px 0 10px; /* Add some spacing */
+    font-size: 0.844rem; /* Reduced by 25% from 1.125rem */
+    margin: 0.234rem 0 0.469rem; /* Reduced by 25% from 0.313rem 0 0.625rem */
 }
 
 .duration {
-    color: var(--primary-color); 
-    font-size: 18px;
-    margin: 5px 0 10px; /* Add some spacing */
+    color: var(--primary-color);
+    font-size: 0.844rem; /* Reduced by 25% from 1.125rem */
+    margin: 0.234rem 0 0.469rem; /* Reduced by 25% from 0.313rem 0 0.625rem */
 }
 
 /* Skill Tags */
 #workskill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.469rem; /* Reduced by 25% from 0.625rem */
 }
 
 .worktag {
-    background-color: var(--secondary-color); /* Neon pink */
+    background-color: var(--secondary-color);
     color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 18px;
+    padding: 0.375rem 0.563rem; /* Reduced by 25% from 0.5rem 0.75rem */
+    border-radius: 0.375rem; /* Reduced by 25% from 0.5rem */
+    font-size: 0.844rem; /* Reduced by 25% from 1.125rem */
 }
 
 /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 36rem) { /* Reduced by 25% from 48rem */
     .work-card {
         flex-direction: column;
         height: auto;
@@ -120,6 +117,6 @@
 
     .work-info-left, .work-info-right {
         width: 100%;
-        padding: 20px;
+        padding: 0.938rem; /* Reduced by 25% from 1.25rem */
     }
 }
