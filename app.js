@@ -1,22 +1,3 @@
-const projectList = document.getElementById("project-list");
-const modalView = document.getElementById("modal-view");
-let allProjects = [];
-
-fetch("data/project-data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    allProjects = data.projects;
-
-    // Sort projects by date from latest to oldest
-    allProjects.sort((a, b) => {
-      const dateA = new Date(a.date);
-      const dateB = new Date(b.date);
-      return dateB - dateA; // Compare in descending order
-    });
-
-    // Render all project cards
-    updateProjectList(allProjects);
-  });
 
 
   function updateProjectList(projects) {
@@ -165,7 +146,31 @@ fetch("data/project-data.json")
       projectList.appendChild(card);
     });
   }
-  const blogList = document.getElementById("blog-list");
+
+
+const projectList = document.getElementById("project-list");
+const modalView = document.getElementById("modal-view");
+let allProjects = [];
+
+fetch("data/project-data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    allProjects = data.projects;
+
+    // Sort projects by date from latest to oldest
+    allProjects.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB - dateA; // Compare in descending order
+    });
+
+    // Render all project cards
+    updateProjectList(allProjects);
+});
+
+
+
+const blogList = document.getElementById("blog-list");
 let allBlogs = [];
 
 // Fetch the blog data (replace 'data/blog-data.json' with your actual data path)
@@ -323,17 +328,27 @@ window.onclick = function(event) {
 // Select elements
 const aboutContent = document.querySelector('.about-content');
 const workCards = document.querySelectorAll('.work-card');
+const educationCards = document.querySelectorAll('.education-card');
+let projectCards; // Declare projectCards here to make it accessible globally
+let blogCards;
 
-// Check if element is in view
+// Use setTimeout to wait for project cards to be added to the DOM
+setTimeout(() => {
+  projectCards = document.querySelectorAll('.project-card'); // Assign the NodeList to the global variable
+  console.log("projectCards after delay:", projectCards); // Check if elements exist after a delay
+  blogCards = document.querySelectorAll('.blog-card');
+}, 100);
+
+// Check if element is at least partially in view
 function isElementInView(element) {
     const rect = element.getBoundingClientRect();
     return (
-        rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        rect.top < (window.innerHeight || document.documentElement.clientHeight) + 100 &&
+        rect.bottom > -1000
     );
 }
 
-// Handle scroll with combined logic for both aboutContent and workCards
+// Handle scroll and toggle "in-view" class for both aboutContent and workCards
 function handleScroll() {
     // Handle .about-content visibility
     if (isElementInView(aboutContent)) {
@@ -352,9 +367,46 @@ function handleScroll() {
             card.classList.remove('in-view');
         }
     });
+
+    // Handle each .education-card visibility
+    educationCards.forEach(card => {
+        if (isElementInView(card)) {
+            card.classList.add('in-view');
+            console.log('Element in view:', card); // Debug line
+        } else {
+            card.classList.remove('in-view');
+        }
+    });
+
+    // Handle each .project-card visibility, ensuring projectCards is defined
+    if (projectCards) {
+        projectCards.forEach((card,index) => {
+            if (isElementInView(card)) {
+              setTimeout(() => {
+                card.classList.add('in-view');
+                console.log('Element in view:', card); // Debug line
+            }, index * 100); // 100ms delay per card, adjust for slower or faster delay
+            } else {
+                card.classList.remove('in-view');
+            }
+        });
+    }
+
+    if (blogCards) {
+      blogCards.forEach((card,index) => {
+          if (isElementInView(card)) {
+            setTimeout(() => {
+              card.classList.add('in-view');
+              console.log('Element in view:', card); // Debug line
+          }, index * 100); // 100ms delay per card, adjust for slower or faster delay
+          } else {
+              card.classList.remove('in-view');
+          }
+      });
+  }
 }
 
-// Throttle function to limit the frequency of scroll events
+// Throttle function to limit the frequency of scroll and resize events
 function throttle(fn, delay) {
     let lastCall = 0;
     return function (...args) {
@@ -365,8 +417,11 @@ function throttle(fn, delay) {
     };
 }
 
-// Add throttled scroll event listener
-window.addEventListener('scroll', throttle(handleScroll, 100));
+// Add throttled scroll and resize event listeners
+const throttledHandleScroll = throttle(handleScroll, 100);
+window.addEventListener('scroll', throttledHandleScroll);
+window.addEventListener('resize', throttledHandleScroll); // Ensures responsiveness on resize
+
 
 
 const createSnowflake = () => {
