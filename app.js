@@ -266,46 +266,67 @@ function updateBlogList(blogs) {
     });
   });
 
-// setInterval(changeBackgroundImage, 3000); // Change image every 3 seconds
+// Video and overlay elements
 const aboutVideo = document.querySelector('#about-video');
 const aboutImageOverlay = document.querySelector('.about-image-overlay');
+const textOverlay = document.createElement('div'); // Create a text overlay element
+textOverlay.classList.add('text-overlay'); // Add a class for styling
+aboutImageOverlay.parentElement.appendChild(textOverlay); // Append to the parent of aboutImageOverlay
+
 const videoSources = [
-    '../images/videos/aloha.mp4',
-    '../images/videos/b2.mp4',
-    '../images/videos/robocon3.mp4',
-    '../images/videos/robocon2.mp4',
-    '../images/videos/robocon4.mp4',
-    '../images/videos/robocon5.mp4',
-    '../images/videos/autorobot.mp4',
-    '../images/videos/drne.mp4',
-    '../images/videos/ariac.mp4',
-    '../images/videos/quadruped.mp4',
-    '../images/videos/auto_vehicle.mp4',
-    '../images/videos/firefly.mp4',
-]; // Replace with your actual video paths
+    { src: '../images/videos/aloha.mp4', title: 'Imitation Learning' },
+    { src: '../images/videos/b2.mp4', title: 'Unitree B2 Quadruped' },
+    { src: '../images/videos/robocon3.mp4', title: 'ABU Robocon' },
+    { src: '../images/videos/robocon2.mp4', title: 'Autonomous Robots' },
+    { src: '../images/videos/robocon4.mp4', title: 'ABU Robocon' },
+    { src: '../images/videos/robocon5.mp4', title: 'ABU Robocon' },
+    { src: '../images/videos/autorobot.mp4', title: 'Autonomous Robot Exploration' },
+    { src: '../images/videos/drne.mp4', title: 'Drone Simulation' },
+    { src: '../images/videos/ariac.mp4', title: 'ARIAC Competition' },
+    { src: '../images/videos/quadruped.mp4', title: 'Quadruped Robots' },
+    { src: '../images/videos/auto_vehicle.mp4', title: 'Autonomous Vehicle' },
+    { src: '../images/videos/firefly.mp4', title: 'Firefly Swarm Robotics' },
+];
 let videoIndex = 0;
 
-// Function to smoothly change the video source with a fade transition
+// Function to smoothly change the video source and update the text overlay
 function changeBackgroundVideo() {
-  aboutVideo.style.opacity = '0'; // Fade out current video
-  setTimeout(() => {
-      videoIndex = (videoIndex + 1) % videoSources.length;
-      aboutVideo.src = videoSources[videoIndex];
-      aboutVideo.play();
-      aboutVideo.style.opacity = '1'; // Fade in new video
-  }, 1000); // Wait for fade-out transition to complete
+    aboutVideo.style.opacity = '0'; // Fade out current video
+    textOverlay.style.opacity = '0'; // Fade out text overlay
+    textOverlay.style.transform = 'translateX(100%)'; // Slide out text overlay
+
+    setTimeout(() => {
+        videoIndex = (videoIndex + 1) % videoSources.length;
+        aboutVideo.src = videoSources[videoIndex].src;
+        aboutVideo.play();
+
+        // Update the text overlay
+        textOverlay.textContent = videoSources[videoIndex].title;
+        textOverlay.style.transform = 'translateX(0)'; // Slide in text overlay
+        aboutVideo.style.opacity = '1'; // Fade in new video
+        textOverlay.style.opacity = '1'; // Fade in new text
+    }, 1000); // Wait for fade-out transition to complete
 }
 
 // Start with the image overlay, then fade it out and start the video slideshow
 setTimeout(() => {
-  aboutImageOverlay.style.opacity = '0'; // Fade out the image overlay
-  aboutVideo.style.opacity = '1'; // Fade in the video
-  aboutVideo.src = videoSources[videoIndex];
-  aboutVideo.play();
+    aboutImageOverlay.style.opacity = '0'; // Fade out the image overlay
+    aboutVideo.style.opacity = '1'; // Fade in the video
+    textOverlay.style.opacity = '1'; // Fade in the text overlay
+    textOverlay.style.transform = 'translateX(0)'; // Slide in text overlay
 
-  // Start the video slideshow with smooth transitions after the initial fade-in
-  setInterval(changeBackgroundVideo, 6000); // Interval slightly longer than video switch delay
+    aboutVideo.src = videoSources[videoIndex].src;
+    aboutVideo.play();
+
+    textOverlay.textContent = videoSources[videoIndex].title;
+
+    // Start the video slideshow with smooth transitions after the initial fade-in
+    setInterval(changeBackgroundVideo, 6000); // Interval slightly longer than video switch delay
 }, 1500); // Initial 1-second delay to display the image
+
+
+
+
 
 
 

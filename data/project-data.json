@@ -248,10 +248,15 @@
       "longDescription": "Developed a deep learning framework for predicting match outcomes in the game Valorant by leveraging a combination of Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks. The CNNs were utilized to extract and analyze critical in-game visual elements, while the LSTMs captured and interpreted temporal patterns essential for understanding the flow of the game. As no pre-existing dataset matched the project requirements, a custom dataset was meticulously created from competition videos, ensuring a rich and diverse data source. The model was rigorously trained and tested, achieving a prediction accuracy that surpassed previously attainable benchmarks, demonstrating the effectiveness of the integrated CNN-LSTM approach in capturing both spatial and temporal dynamics of the game. This project was conducted as part of a course to explore the intersection of deep learning and e-sports analytics.",
       "media": [
         {
+          "type": "video",
+          "url": "images/videos/esport.mp4"
+        },
+        {
           "type": "article",
           "image": "images/project/valorant.jpg",
           "url": "images/reports/enmp809k_project_report.pdf"
         }
+        
       ]
     },
 
@@ -259,16 +264,16 @@
       "id": 11,
       "title": "Neural Implicit Representation based SLAM techniques",
       "image": "images/project/nerf.png",
-      "description": "Did a comparative study of five prominent neural SLAM methods—iMap, NICE-SLAM, Co-SLAM, Nerf SLAM, and vMAP",
+      "description": "Explored and benchmarked state-of-the-art Neural Radiance Field (NeRF) methods for generating high-fidelity 3D models, emphasizing their practical applications and performance trade-offs.",
       "tags": ["Pytorch", "Computer Vision", "CNN", "LSTM"],
       "github": "https://github.com/VKSingh03/astar_turtlebot_ros_noetic",
       "video": "",
       "date": "December 2023",
-      "longDescription": "Developed a deep learning framework for predicting match outcomes in the game Valorant by leveraging a combination of Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks. The CNNs were utilized to extract and analyze critical in-game visual elements, while the LSTMs captured and interpreted temporal patterns essential for understanding the flow of the game. As no pre-existing dataset matched the project requirements, a custom dataset was meticulously created from competition videos, ensuring a rich and diverse data source. The model was rigorously trained and tested, achieving a prediction accuracy that surpassed previously attainable benchmarks, demonstrating the effectiveness of the integrated CNN-LSTM approach in capturing both spatial and temporal dynamics of the game. This project was conducted as part of a course to explore the intersection of deep learning and e-sports analytics.",
+      "longDescription": "The NeRF Comparative Study project focused on evaluating and benchmarking advanced Neural Radiance Field (NeRF) techniques for generating detailed 3D models from 2D image datasets. This research aimed to understand the practical applications, strengths, and limitations of NeRF methods in diverse real-world scenarios. The study involved implementing various NeRF architectures to reconstruct complex objects, such as a Lego bulldozer, and comparing their performance in terms of rendering quality, computational efficiency, and adaptability to different datasets. The analysis included varying training parameters, such as the number of epochs, to optimize results and identify the trade-offs between computational cost and model fidelity. Through this project, valuable insights were gained into how NeRF techniques can transform 3D vision tasks, such as digital twin creation, virtual reality, and robotics. The outcomes highlight the potential of NeRF methods to set new benchmarks in 3D model generation while addressing key challenges like dataset requirements and computational constraints.",
       "media": [
         {
           "type": "article",
-          "image": "images/images/nerf.png",
+          "image": "images/project/nerf.png",
           "url": "images/reports/cmsc848f_project_report.pdf"
         }
       ]
