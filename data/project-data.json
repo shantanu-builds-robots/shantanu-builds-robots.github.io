@@ -329,7 +329,30 @@
           "url": "images/project/lego.gif"
         }
       ]
+    },
+
+    {
+      "id": 13,
+      "title": "TD3 Reinforcement Learning for Quadruped Locomotion",
+      "image": "images/project/evaluation_demo_loop.gif",
+      "description": "Developed a robust RL pipeline using the TD3 algorithm to train a simulated quadruped (Ant) for efficient and stable locomotion in the Gymnasium Ant-v5 environment.",
+      "tags": ["Reinforcement Learning", "TD3", "Gymnasium", "PyTorch"],
+      "github": "https://github.com/shantanuparabumd/openai_gym",
+      "video": "",
+      "date": "November 2023",
+      "longDescription": "This project applies the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm to train a simulated quadruped robot in the Gymnasium Ant-v5 environment. The TD3 algorithm, known for its robustness in continuous action spaces, leverages features such as target policy smoothing, clipped double Q-learning, and delayed updates to stabilize training and reduce overestimation bias. Custom reward functions incentivize forward velocity, stable torso posture, and efficient gait patterns. \n\nTraining visualizations include progress plots, contact force analyses, and gait trajectories, showcasing the agent’s development of a stable and dynamic trot gait. YAML-based configuration files manage training parameters, reward structures, and environment settings, providing flexibility and modularity. This project serves as an in-depth exploration of reinforcement learning for robotics, offering insights into gait optimization and continuous control tasks.",
+      "media": [
+        {
+          "type": "video",
+          "url": "images/project/evaluation_demo.mp4"
+        },
+        {
+          "type": "image",
+          "url": "images/project/evaluation_demo_loop.gif"
+        }
+      ]
     }
+    
     
 
       
