@@ -356,7 +356,7 @@
     {
       "id": 14,
       "title": "TD3 Simulation for Quadruped Robot",
-      "image": "images/videos/quadruped_rl.mp4",
+      "image": "images/project/quad_rl.gif",
       "description": "Developed a simulation pipeline for training a quadruped robot to walk using the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm, optimizing locomotion policies through reinforcement learning in a custom MuJoCo environment.",
       "tags": ["Reinforcement Learning", "TD3", "MuJoCo", "PyTorch"],
       "github": "https://github.com/shantanuparabumd/openai_gym",
@@ -365,7 +365,7 @@
       "longDescription": "This project implements a reinforcement learning pipeline to train a quadruped robot to achieve stable locomotion using the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm. The simulation is conducted in a custom MuJoCo environment tailored for quadruped dynamics, enabling efficient interaction with the physics engine. Key features include reward shaping for gait patterns, height stabilization, and velocity tracking, along with constraints to ensure realistic motion. The training leverages experience replay, target network updates, and delayed policy updates to stabilize learning. The results showcase progressively improving walking behaviors, visualized through trajectory plots, joint angle evolution, and rendered walking sequences. This project integrates PyTorch for implementing the TD3 algorithm and demonstrates the potential of reinforcement learning in robotic locomotion tasks.",
       "media": [
         {
-          "type": "image",
+          "type": "video",
           "url": "images/videos/quadruped_rl.mp4"
         }
       ]
