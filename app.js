@@ -274,18 +274,19 @@ textOverlay.classList.add('text-overlay'); // Add a class for styling
 aboutImageOverlay.parentElement.appendChild(textOverlay); // Append to the parent of aboutImageOverlay
 
 const videoSources = [
+    { src: '../images/videos/quadruped_rl.mp4', title: 'Reinforcement Learning' },
     { src: '../images/videos/aloha.mp4', title: 'Imitation Learning' },
     { src: '../images/videos/b2.mp4', title: 'Unitree B2 Quadruped' },
-    { src: '../images/videos/robocon3.mp4', title: 'ABU Robocon' },
+    { src: '../images/videos/robocon3.mp4', title: 'Autonomous Robots' },
+    { src: '../images/videos/ariac.mp4', title: 'AGILE Robot Infrastucture' },
+    { src: '../images/videos/drne.mp4', title: 'Drones' },
+    { src: '../images/videos/autorobot.mp4', title: 'Autonomous Robot Exploration' },
+    { src: '../images/videos/quadruped.mp4', title: 'Quadruped Locomotion Control' },
+    { src: '../images/videos/auto_vehicle.mp4', title: 'Autonomous Vehicle' },
+    { src: '../images/videos/firefly.mp4', title: 'Firefly Swarm Robotics' },
     { src: '../images/videos/robocon2.mp4', title: 'Autonomous Robots' },
     { src: '../images/videos/robocon4.mp4', title: 'ABU Robocon' },
     { src: '../images/videos/robocon5.mp4', title: 'ABU Robocon' },
-    { src: '../images/videos/autorobot.mp4', title: 'Autonomous Robot Exploration' },
-    { src: '../images/videos/drne.mp4', title: 'Drone Simulation' },
-    { src: '../images/videos/ariac.mp4', title: 'ARIAC Competition' },
-    { src: '../images/videos/quadruped.mp4', title: 'Quadruped Robots' },
-    { src: '../images/videos/auto_vehicle.mp4', title: 'Autonomous Vehicle' },
-    { src: '../images/videos/firefly.mp4', title: 'Firefly Swarm Robotics' },
 ];
 let videoIndex = 0;
 
@@ -443,19 +444,3 @@ const throttledHandleScroll = throttle(handleScroll, 100);
 window.addEventListener('scroll', throttledHandleScroll);
 window.addEventListener('resize', throttledHandleScroll); // Ensures responsiveness on resize
 
-
-
-const createSnowflake = () => {
-  const snowflake = document.createElement("div");
-  snowflake.classList.add("snowflake");
-  snowflake.style.left = Math.random() * 100 + "vw";
-  snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-  snowflake.style.opacity = Math.random();
-  document.getElementById("snowfall").appendChild(snowflake);
-
-  setTimeout(() => {
-      snowflake.remove();
-  }, 5000);
-};
-
-setInterval(createSnowflake, 200);
