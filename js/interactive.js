@@ -347,7 +347,7 @@
       printLine('  Focus   :  Robot Learning · ROS2 · PyTorch');
       printLine('  Degree  :  M.Eng Robotics, UMD (GPA 3.97)');
       printLine('  Base    :  United States 🇺🇸');
-      printLine('  GitHub  :  github.com/shantanuparabumd', 't-cyan');
+      printLine('  GitHub  :  github.com/shantanu-builds-robots', 't-cyan');
       blank();
       return;
     }
@@ -423,7 +423,7 @@
       printLine('  Email    :  shantanuparab99@gmail.com', 't-pink');
       printLine('  Phone    :  +1 (301) 905-7946');
       printLine('  LinkedIn :  linkedin.com/in/shantanu-parab', 't-cyan');
-      printLine('  GitHub   :  github.com/shantanuparabumd',   't-cyan');
+      printLine('  GitHub   :  github.com/shantanu-builds-robots',   't-cyan');
       blank();
       return;
     }

@@ -12,7 +12,7 @@
         "SolidWorks",
         "Drone Simulation"
       ],
-      "github": "https://github.com/shantanuparabumd/drone_delivery",
+      "github": "https://github.com/shantanu-builds-robots/drone_delivery",
       "video": "",
       "date": "May 2024",
       "longDescription": "This project involves developing a simulated drone delivery system using Gazebo, ROS, SolidWorks, and Blender. The drone, modeled in SolidWorks, is equipped with custom plugins for flight control, odometry publishing, and vacuum gripper functionality for picking up and placing parcels based on detected Aruco markers. The drone's flight is stabilized through a PID controller, while odometry data serves as feedback. The environment and parcels are modeled in Blender, with necessary physics adjustments for realistic simulation. The article provides a step-by-step guide on developing plugins for drone flight, grasping, and controlled delivery of parcels in specified locations.",
@@ -48,7 +48,7 @@
         "URDF",
         "Python"
       ],
-      "github": "https://github.com/shantanuparabumd/quad_robo",
+      "github": "https://github.com/shantanu-builds-robots/quad_robo",
       "video": "",
       "date": "November 2023",
       "longDescription": "In this project, I designed a Quadruped Robot from the ground up using SolidWorks, converted it to URDF for ROS integration, and simulated it in Gazebo. Key highlights include the detailed design in SolidWorks, URDF conversion for seamless ROS integration, implementation of inverse kinematics using DH parameters and Jacobian methods, and robust ROS communication for controlling the robot’s movements. Additionally, I developed a Python script for interactive control of the robot, making it versatile and user-friendly in the simulation environment. This project showcases my skills in Robot Modelling, Simulation, and ROS, providing valuable experience with Gazebo and Python control systems.",
@@ -82,7 +82,7 @@
         "YOLO",
         "MiDAS"
       ],
-      "github": "https://github.com/shantanuparabumd/Autonomous-Robot-809T",
+      "github": "https://github.com/shantanu-builds-robots/Autonomous-Robot-809T",
       "video": "",
       "date": "May 2023",
       "longDescription": "This project involved designing and constructing an autonomous vehicle that navigates complex environments and performs object manipulation. Using a Raspberry Pi with Ubuntu 20.04 and ROS2 Galactic, the vehicle integrates various sensors and advanced algorithms. Object detection is handled by YOLO, allowing efficient identification of colored objects, while MiDAS provides depth estimation for accurate perception. Localization is achieved through encoders and IMU sensors, with the RRT* algorithm for global path planning and a potential field algorithm for dynamic path planning, ensuring real-time adaptation to moving obstacles. Custom libraries were developed to enable seamless communication between hardware components via UART, SPI, and I2C protocols, resulting in a robust system capable of autonomous navigation and manipulation in dynamic settings.",
@@ -118,7 +118,7 @@
         "Robotics",
         "Automation"
       ],
-      "github": "https://github.com/shantanuparabumd/ariac_2024",
+      "github": "https://github.com/shantanu-builds-robots/ariac_2024",
       "video": "",
       "date": "May 2024",
       "longDescription": "As part of the Agile Robotics for Industrial Automation Competition (ARIAC), I developed robotics solutions focused on enhancing industrial automation processes. My work involved creating automated systems to manage complex tasks efficiently, using ROS for modular and scalable development. This project emphasized real-world applications in industrial environments, challenging me to optimize robotic actions for high precision and reliability, which are critical in automation workflows.",
@@ -157,7 +157,7 @@
         "LiDAR",
         "Computer Vision"
       ],
-      "github": "https://github.com/shantanuparabumd/autonomous_vehicle",
+      "github": "https://github.com/shantanu-builds-robots/autonomous_vehicle",
       "video": "",
       "date": "March 2024",
       "longDescription": "This project involved developing an autonomous vehicle simulation using a Toyota Prius model in the Gazebo environment, with ROS2 integration for sensor and actuator control. Using sensor fusion from LiDAR and camera data, the simulation enabled accurate obstacle detection and lane recognition. I implemented the RRT* algorithm for efficient global path planning, allowing the vehicle to navigate through static obstacles. For dynamic obstacles, I utilized potential field algorithms to facilitate real-time path adjustments. OpenCV was employed for lane and obstacle identification, enhancing the vehicle's navigation capabilities. In line with Agile practices, this project involved rigorous testing with the Google Test Suite and continuous integration to ensure code robustness.",
@@ -192,7 +192,7 @@
         "3D Vision",
         "Computer Vision"
       ],
-      "github": "https://github.com/shantanuparabumd/assignment4_sparab",
+      "github": "https://github.com/shantanu-builds-robots/assignment4_sparab",
       "video": "",
       "date": "December 2023",
       "longDescription": "This project implements PointNet for 3D object classification and segmentation tasks using point cloud data. The classification model achieves a high test accuracy of 97.9%, while the segmentation model achieves 90.26% accuracy, both trained over 250 epochs. Robustness analysis reveals that reducing the number of points degrades performance due to loss of critical features, while extreme rotations cause misclassifications due to unseen orientations during training. Quantitative and qualitative results highlight the models' strengths in capturing object geometries, with noted challenges in distinguishing similar shapes like lamps and vases or handling densely packed components in segmentation tasks.",
@@ -231,7 +231,7 @@
         "OpenCV",
         "Firefly Algorithm"
       ],
-      "github": "https://github.com/shantanuparabumd/firefly_swarm",
+      "github": "https://github.com/shantanu-builds-robots/firefly_swarm",
       "video": "",
       "date": "October 2023",
       "longDescription": "This project explores swarm robotics through a bio-inspired decision-making algorithm based on the Firefly Algorithm, implemented within the Gazebo simulation environment using ROS2. Using Turtle robots with camera sensors and IMUs, the system identifies colored objects and builds a global map, demonstrating intelligent collective behavior. Each robot locates objects with OpenCV and uses the Firefly algorithm to simulate attraction based on intensity and distance, causing robots to cluster near objects of interest. This approach illustrates the application of swarm intelligence in tasks such as search and rescue, where robots gather and navigate collaboratively. The project successfully showcases the Firefly algorithm's potential for swarm-based decision-making and object localization in simulated environments, expanding its use beyond traditional optimization problems.",
@@ -262,7 +262,7 @@
         "Simulation",
         "Custom Plugin"
       ],
-      "github": "https://github.com/shantanuparabumd/conveyor_belt",
+      "github": "https://github.com/shantanu-builds-robots/conveyor_belt",
       "video": "",
       "date": "September 2023",
       "longDescription": "In this project, I created a conveyor belt simulation within the Gazebo environment, utilizing a custom ROS2 plugin for precise object movement. Inspired by the ARIAC competition, this setup features a URDF model of a conveyor belt controlled via a prismatic joint, enabling continuous forward motion. To ensure objects move forward without returning with the belt, the plugin resets the belt's position at each cycle, allowing objects to progress independently along the belt. The project includes launch scripts and a 'spawn_object' script, making the conveyor belt easily deployable in diverse simulation scenarios. This project illustrates how to create custom Gazebo plugins, enhancing simulation capabilities and providing insights into real-world industrial scenarios.",
@@ -380,7 +380,7 @@
         "Computer Vision",
         "3D Vision"
       ],
-      "github": "https://github.com/shantanuparabumd/assignment_2_sparab",
+      "github": "https://github.com/shantanu-builds-robots/assignment_2_sparab",
       "video": "",
       "date": "October 2023",
       "longDescription": "This project reconstructs 3D objects from single-view images using voxel grids, point clouds, and meshes. Loss functions like Binary Cross Entropy, Chamfer Loss, and smoothness loss ensure accurate fitting. By tuning hyperparameters such as batch size and increasing training workers, the pipeline achieves improved convergence and efficient performance. Visualizations across iterations showcase how reconstructions evolve from uniform shapes to detailed 3D models. Quantitative evaluations highlight point cloud and mesh methods as superior in capturing fine details compared to voxels, which face memory constraints. The study emphasizes iterative visualization and optimized training for effective 3D reconstruction.",
@@ -418,7 +418,7 @@
         "NeRF",
         "3D Vision"
       ],
-      "github": "https://github.com/shantanuparabumd/assignment3_sparab",
+      "github": "https://github.com/shantanu-builds-robots/assignment3_sparab",
       "video": "",
       "date": "November 2023",
       "longDescription": "This project implements a Neural Radiance Field (NeRF) pipeline using differentiable volume rendering to create realistic 3D scene representations. It includes ray sampling to map pixels to world-space rays, point sampling to stratify along rays, and volume rendering to aggregate weights and compute depth maps. The pipeline optimizes a 3D implicit volume to reconstruct a box with known ground truth images and trains a neural radiance field for realistic scene renderings. Progressive visualizations highlight improvements over epochs, showcasing depth maps, point clouds, and final rendered images. The project leverages PyTorch3D and references advanced resources for a robust exploration of neural 3D modeling.",
@@ -441,7 +441,7 @@
         "Gymnasium",
         "PyTorch"
       ],
-      "github": "https://github.com/shantanuparabumd/openai_gym",
+      "github": "https://github.com/shantanu-builds-robots/openai_gym",
       "video": "",
       "date": "November 2023",
       "longDescription": "This project applies the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm to train a simulated quadruped robot in the Gymnasium Ant-v5 environment. The TD3 algorithm, known for its robustness in continuous action spaces, leverages features such as target policy smoothing, clipped double Q-learning, and delayed updates to stabilize training and reduce overestimation bias. Custom reward functions incentivize forward velocity, stable torso posture, and efficient gait patterns. \n\nTraining visualizations include progress plots, contact force analyses, and gait trajectories, showcasing the agent’s development of a stable and dynamic trot gait. YAML-based configuration files manage training parameters, reward structures, and environment settings, providing flexibility and modularity. This project serves as an in-depth exploration of reinforcement learning for robotics, offering insights into gait optimization and continuous control tasks.",
@@ -470,7 +470,7 @@
         "MuJoCo",
         "PyTorch"
       ],
-      "github": "https://github.com/shantanuparabumd/openai_gym",
+      "github": "https://github.com/shantanu-builds-robots/openai_gym",
       "video": "images/videos/web/quadruped_rl.mp4",
       "date": "January 2025",
       "longDescription": "This project implements a reinforcement learning pipeline to train a quadruped robot to achieve stable locomotion using the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm. The simulation is conducted in a custom MuJoCo environment tailored for quadruped dynamics, enabling efficient interaction with the physics engine. Key features include reward shaping for gait patterns, height stabilization, and velocity tracking, along with constraints to ensure realistic motion. The training leverages experience replay, target network updates, and delayed policy updates to stabilize learning. The results showcase progressively improving walking behaviors, visualized through trajectory plots, joint angle evolution, and rendered walking sequences. This project integrates PyTorch for implementing the TD3 algorithm and demonstrates the potential of reinforcement learning in robotic locomotion tasks.",
