@@ -16,6 +16,26 @@
 .ig-intro h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); line-height: 1.1; }
 .ig-lede { margin: 6px 0 0; color: var(--text-dim); font-size: 1.05rem; }
 
+/* ── Featured: a live competition, above the reel list ───────────────────── */
+.ig-feature {
+  display: block; margin-bottom: 20px; overflow: hidden;
+  background: var(--surface); border: 1.5px solid var(--neon); border-radius: var(--radius-m);
+  box-shadow: var(--glow-soft); color: var(--text); text-decoration: none;
+}
+.ig-feature:hover, .ig-feature:active { color: var(--text); box-shadow: var(--glow); }
+.ig-feature img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.ig-feature-body { display: grid; gap: 6px; padding: 16px 18px 18px; }
+.ig-live {
+  display: inline-flex; align-items: center; gap: 8px; justify-self: start;
+  padding: 3px 10px; border-radius: var(--radius-s); background: var(--neon); color: var(--on-neon);
+  font-family: var(--mono); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.ig-live-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: ig-pulse 1.6s ease-in-out infinite; }
+@keyframes ig-pulse { 50% { opacity: 0.3; } }
+.ig-feature strong { font-size: 1.4rem; line-height: 1.2; margin-top: 4px; }
+.ig-feature-text { color: var(--text-dim); font-size: 1rem; line-height: 1.5; }
+.ig-feature-cta { margin-top: 6px; color: var(--neon); font-weight: 700; font-size: 1.0625rem; }
+
 /* ── Search ──────────────────────────────────────────────────────────────── */
 .ig-search {
   display: flex; align-items: center; gap: 10px;
@@ -79,4 +99,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .ig-links a { transition: none; }
+  .ig-live-dot { animation: none; }
 }
