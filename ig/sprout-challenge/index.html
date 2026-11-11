@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sprout Challenge | Shantanu Parab</title>
+	<meta name="description" content="Code a robot dog through an obstacle course in simulation. Fastest robot wins a $20 gift card. Free, runs on your laptop, no GPU. Deadline 30 November 2026.">
+	<meta name="author" content="Shantanu Parab">
+	<link rel="canonical" href="https://shantanu-builds-robots.github.io/ig/sprout-challenge/">
+	<meta name="theme-color" content="#07120D">
+
+	<meta property="og:title" content="The Sprout Challenge">
+	<meta property="og:description" content="My robot won't jump this wall. Can your code? Fastest robot wins $20. Deadline 30 Nov.">
+	<meta property="og:image" content="https://shantanu-builds-robots.github.io/ig/sprout-challenge/media/og.jpg">
+	<meta property="og:url" content="https://shantanu-builds-robots.github.io/ig/sprout-challenge/">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2307120D'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2334D399' stroke-width='3'/%3E%3C/svg%3E">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="challenge.css">
+</head>
+<body>
+	<a class="skip" href="#main">Skip to the content</a>
+
+	<header class="bar">
+		<a class="back" href="../">&larr; All reel links</a>
+		<a class="handle" href="https://www.instagram.com/shantanu.builds.robots/" target="_blank" rel="noopener">@shantanu.builds.robots</a>
+	</header>
+
+	<main id="main">
+
+		<!-- Hero -->
+		<section class="hero">
+			<div class="hero-text">
+				<p class="kick"><span class="dot" aria-hidden="true"></span>Sprout Challenge &middot; live</p>
+				<h1>My robot won't jump this wall. <em>Can your code?</em></h1>
+				<p class="lede">Write a controller that gets Sprout, a simulated 28&nbsp;kg robot dog, down an obstacle course. Fastest robot wins a <strong>$20 gift card</strong>, and the top&nbsp;10 runs get featured on Instagram.</p>
+
+				<div class="countdown" id="countdown" aria-live="off">
+					<p class="countdown-label">Entries close 30 November, 23:59 IST</p>
+					<div class="countdown-clock" aria-hidden="true">
+						<div><b data-unit="d">--</b><span>days</span></div>
+						<div><b data-unit="h">--</b><span>hours</span></div>
+						<div><b data-unit="m">--</b><span>min</span></div>
+						<div><b data-unit="s">--</b><span>sec</span></div>
+					</div>
+				</div>
+
+				<div class="actions">
+					<a class="btn primary" href="https://github.com/shantanu-builds-robots/sprout-challenge" target="_blank" rel="noopener">Get the code on GitHub</a>
+					<a class="btn" href="#guide">Watch the 60 s guide</a>
+					<a class="btn" href="https://forms.gle/poqftXxEo1bxBS9V9" target="_blank" rel="noopener">Enter the challenge</a>
+					<a class="btn" href="#pdf">Rulebook PDF</a>
+				</div>
+			</div>
+			<figure class="hero-video">
+				<video src="media/run.mp4" poster="media/run.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The baseline controller walking Sprout down the practice track, sped up four times"></video>
+				<figcaption>The baseline finishing the practice track (4&times; speed)</figcaption>
+			</figure>
+		</section>
+
+		<!-- Key facts -->
+		<ul class="facts" aria-label="Key facts">
+			<li><b>$20</b><span>gift card for the fastest robot</span></li>
+			<li><b>Top 10</b><span>runs featured on Instagram</span></li>
+			<li><b>30 Nov</b><span>23:59 IST deadline (18:29 UTC)</span></li>
+			<li><b>0 GPUs</b><span>free, runs on your laptop</span></li>
+		</ul>
+
+		<!-- Guidelines video -->
+		<section class="block" id="guide">
+			<p class="kick">Watch first</p>
+			<h2>The guidelines <em>in 60 seconds.</em></h2>
+			<p class="body">The task, the course, how to enter, how you're scored and what you win. Everything in it is in the rulebook below.</p>
+			<div class="guide">
+				<video class="guide-v" src="media/guide-v.mp4" poster="media/guide-v.jpg" controls playsinline preload="none" aria-label="The Sprout Challenge guidelines, vertical video with captions"></video>
+				<video class="guide-h" src="media/guide-h.mp4" poster="media/guide-h.jpg" controls playsinline preload="none" aria-label="The Sprout Challenge guidelines, video with captions"></video>
+			</div>
+		</section>
+
+		<!-- The course -->
+		<section class="block" id="course">
+			<p class="kick">The course</p>
+			<h2>57 m of trouble for a <em>four-legged robot.</em></h2>
+			<p class="body">Rough ground, stairs, hurdles, a ramp, a narrow bridge, a wall and waves stand between the start and the finish line. Your controller doesn't get a map: it sees what's ahead through a terrain scan, as a real robot would.</p>
+			<ul class="tiles">
+				<li style="--img:url(media/stairs.jpg)"><span>Stairs</span></li>
+				<li style="--img:url(media/hurdles.jpg)"><span>Hurdles</span></li>
+				<li style="--img:url(media/bridge.jpg)"><span>Narrow bridge</span></li>
+				<li style="--img:url(media/ramp.jpg)"><span>Ramp</span></li>
+				<li style="--img:url(media/waves.jpg)"><span>Waves</span></li>
+				<li class="hot" style="--img:url(media/wall.jpg)"><span>40 cm wall</span></li>
+			</ul>
+			<div class="note">
+				<h3>The final race is on a secret track</h3>
+				<p>The competition arena has exactly the practice track's sections, with the same sizes, <strong>in a different order</strong>. It stays secret until the results. Practice on shuffled copies of the practice track so your robot is ready for any order.</p>
+			</div>
+		</section>
+
+		<!-- Your job -->
+		<section class="block split" id="job">
+			<div>
+				<p class="kick">Your job</p>
+				<h2>Write <em>one function.</em></h2>
+				<p class="body">50 times a second your controller gets the robot's sensors and returns 12 joint angles. Use any method: a hand-written gait, PID, MPC, reinforcement learning, or something nobody has tried yet.</p>
+				<ul class="stats">
+					<li><b>50</b><span>times a second</span></li>
+					<li><b>12</b><span>motors</span></li>
+					<li><b>20 ms</b><span>per step</span></li>
+				</ul>
+			</div>
+			<pre class="code" aria-label="A minimal controller"><code><span class="k">from</span> sprout_challenge <span class="k">import</span> Controller
+
+<span class="k">class</span> <span class="f">MyController</span>(Controller):
+    <span class="k">def</span> <span class="f">reset</span>(self, info):
+        <span class="c"># once per run: limits, barriers</span>
+        self.pose = info[<span class="s">"default_pose"</span>]
+
+    <span class="k">def</span> <span class="f">act</span>(self, obs):
+        <span class="c"># joints, IMU, feet, terrain scan</span>
+        targets = self.pose.copy()
+        <span class="k">return</span> targets  <span class="c"># 12 joint angles [rad]</span></code></pre>
+		</section>
+
+		<!-- Time to beat -->
+		<section class="block" id="baselines">
+			<p class="kick">Time to beat</p>
+			<h2>Three examples come with it. <em>Start from any.</em></h2>
+			<ol class="board">
+				<li><b>1</b><span class="who">Neural network <small>reinforcement learning, walks around the wall</small></span><span class="t">61.9 s</span></li>
+				<li><b>2</b><span class="who">Hand-written trot <small>about 100 lines</small></span><span class="t">stuck at 10 m</span></li>
+				<li><b>3</b><span class="who">Stand still <small>the smallest valid entry</small></span><span class="t">0 m</span></li>
+				<li class="you"><b>?</b><span class="who">Your robot</span><span class="t">__._ s</span></li>
+			</ol>
+			<p class="small">Practice track, median of 5 runs. Improving the baseline network is allowed.</p>
+		</section>
+
+		<!-- The wall -->
+		<section class="block split" id="wall">
+			<figure class="frame"><img src="media/wall.jpg" alt="Sprout next to the 40 cm barrier, with the open lane beside it" loading="lazy" width="720" height="480"></figure>
+			<div>
+				<p class="kick">The fork</p>
+				<h2>A 40 cm wall. <em>Jump it</em> or walk around?</h2>
+				<div class="choice">
+					<div><h3 class="lime">Jump it</h3><p>Clear it without touching it and take <strong>5 s</strong> off your finish time.</p></div>
+					<div><h3>Go around</h3><p>A 2.5 m lane stays open on one side. No bonus, no penalty.</p></div>
+				</div>
+				<p class="small">Touching it doesn't end the run, but earns no bonus. Bonuses count only if you finish.</p>
+			</div>
+		</section>
+
+		<!-- Get started -->
+		<section class="block" id="start">
+			<p class="kick">Get started</p>
+			<h2>From zero to your first run <em>in four commands.</em></h2>
+			<p class="body">Python 3.10 to 3.13 on Linux, macOS or Windows. New to this? <a href="https://github.com/shantanu-builds-robots/sprout-challenge/blob/main/INSTALL.md" target="_blank" rel="noopener">The install guide</a> goes step by step.</p>
+			<ol class="steps">
+				<li>
+					<h3>Download it</h3>
+					<div class="cmd"><code>git clone https://github.com/shantanu-builds-robots/sprout-challenge &amp;&amp; cd sprout-challenge</code><button type="button" class="copy">Copy</button></div>
+				</li>
+				<li>
+					<h3>Install it</h3>
+					<div class="cmd"><code>pip install -e ".[video]"</code><button type="button" class="copy">Copy</button></div>
+				</li>
+				<li>
+					<h3>Watch the baseline</h3>
+					<div class="cmd"><code>python -m sprout_challenge.run examples/ppo_baseline --view</code><button type="button" class="copy">Copy</button></div>
+				</li>
+				<li>
+					<h3>Score it like the judges will</h3>
+					<div class="cmd"><code>python -m sprout_challenge.grade examples/ppo_baseline --track practice</code><button type="button" class="copy">Copy</button></div>
+				</li>
+			</ol>
+		</section>
+
+		<!-- Submit -->
+		<section class="block" id="submit">
+			<p class="kick">Submission guidelines</p>
+			<h2>How to <em>submit.</em></h2>
+			<ol class="steps numbered">
+				<li>
+					<h3>Make a submission folder</h3>
+					<p>A folder with a <code>controller.py</code> that defines one <code>Controller</code> subclass, plus anything it loads (weights, lookup tables, helper modules). Load files relative to <code>__file__</code>. Under 200 MB.</p>
+				</li>
+				<li>
+					<h3>Put it in a public GitHub repository</h3>
+					<p>Either as the repository itself, with <code>controller.py</code> at the top, or as the <strong>only</strong> folder in the repository with a <code>controller.py</code>. Commit real files: symbolic links, <code>.pyc</code> files and <code>__pycache__</code> are ignored.</p>
+				</li>
+				<li>
+					<h3>Check it in the grading container</h3>
+					<p>The judges run every entry in the challenge's Docker image: Python 3.11, no network, 1 CPU core, 2 GB of memory. At grading time you can use the standard library, numpy, scipy, onnxruntime and the challenge package. Export trained networks to ONNX or numpy arrays.</p>
+					<div class="cmd"><code>docker build -f docker/Dockerfile -t sprout-challenge .</code><button type="button" class="copy">Copy</button></div>
+					<div class="cmd"><code>docker run --rm --network none --cpus 1 --memory 2g -v "$PWD/my_entry":/submission/my_entry:ro sprout-challenge python -m sprout_challenge.grade /submission/my_entry --track practice</code><button type="button" class="copy">Copy</button></div>
+				</li>
+				<li>
+					<h3>Fill in the entry form</h3>
+					<p>Your name, your Instagram handle, a backup contact for the results (email or phone), and your repository link. Entering as a team? Add everyone. Sent it twice? Your latest response counts. You must follow <a href="https://www.instagram.com/shantanu.builds.robots/" target="_blank" rel="noopener">@shantanu.builds.robots</a>, and still follow it at the deadline.</p>
+					<a class="btn primary" href="https://forms.gle/poqftXxEo1bxBS9V9" target="_blank" rel="noopener">Open the entry form</a>
+				</li>
+			</ol>
+			<div class="note">
+				<h3>You can keep improving until the deadline</h3>
+				<p>Every entry is cloned right after <strong>23:59 IST on 30 November</strong>, and the version in the repository then is the one that counts. Commit dates are not used. Keep the repository public until the results are out.</p>
+			</div>
+		</section>
+
+		<!-- Judging and ranking -->
+		<section class="block" id="judging">
+			<p class="kick">Judging and ranking</p>
+			<h2>How the winner <em>is decided.</em></h2>
+			<p class="body">Every entry is graded the same way, by a script, in the same container. Nobody picks a favorite.</p>
+			<ol class="flow">
+				<li><b>5 runs</b><span>Each entry runs 5 times on the secret arena, with the same robot every time. Only the start moves a little, and every entry gets the same 5 starts.</span></li>
+				<li><b>A score per run</b><span>A finish scores its <strong>time minus any wall bonus</strong>. A run that doesn't finish scores the <strong>distance</strong> it covered. Any finish beats any non-finish.</span></li>
+				<li><b>The median</b><span>Your entry's score is its <strong>3rd best run of 5</strong>, so one lucky or unlucky run doesn't decide it.</span></li>
+				<li><b>The ranking</b><span>Lowest median wins. A tie goes to the better <strong>average over all 5 runs</strong>, where a run that didn't finish counts as 180 s plus the distance it had left.</span></li>
+			</ol>
+
+			<h3 class="sub">An example leaderboard</h3>
+			<p class="small">Made-up entries, on a 56.8 m arena. The highlighted run is each entry's median.</p>
+			<ol class="ranking">
+				<li>
+					<span class="pos">1</span>
+					<div class="entry"><b>@steady_trot</b>
+						<ul class="runs"><li>47.8 s</li><li>49.3 s</li><li class="med">50.6 s</li><li>51.0 s</li><li>55.2 s</li></ul>
+						<p>Ties with #2, and wins on the average: 50.8 s against 113.1 s.</p>
+					</div>
+					<span class="score">50.6 s</span>
+				</li>
+				<li>
+					<span class="pos">2</span>
+					<div class="entry"><b>@wall_jumper</b>
+						<ul class="runs"><li>47.1 s <i>jumped</i></li><li>48.0 s <i>jumped</i></li><li class="med">50.6 s</li><li class="dnf">33.0 m</li><li class="dnf">21.0 m</li></ul>
+						<p>Two clean jumps took 5 s off, but two falls pull its average down.</p>
+					</div>
+					<span class="score">50.6 s</span>
+				</li>
+				<li>
+					<span class="pos">3</span>
+					<div class="entry"><b>@slow_and_sure</b>
+						<ul class="runs"><li>58.4 s</li><li>60.2 s</li><li class="med">61.9 s</li><li class="dnf">44.5 m</li><li class="dnf">30.2 m</li></ul>
+						<p>Only 3 finishes, but that's enough for a time as its median.</p>
+					</div>
+					<span class="score">61.9 s</span>
+				</li>
+				<li>
+					<span class="pos">4</span>
+					<div class="entry"><b>@all_or_nothing</b>
+						<ul class="runs"><li>45.0 s</li><li>46.1 s</li><li class="med dnf">40.2 m</li><li class="dnf">30.1 m</li><li class="dnf">12.0 m</li></ul>
+						<p>The two fastest runs of anyone, but it finished only twice, so its median is a distance and it ranks below every entry whose median is a finish.</p>
+					</div>
+					<span class="score">40.2 m</span>
+				</li>
+				<li>
+					<span class="pos">5</span>
+					<div class="entry"><b>@stand_still</b>
+						<ul class="runs"><li class="dnf">0 m</li><li class="dnf">0 m</li><li class="med dnf">0 m</li><li class="dnf">0 m</li><li class="dnf">0 m</li></ul>
+					</div>
+					<span class="score">0 m</span>
+				</li>
+			</ol>
+
+			<div class="note">
+				<h3>Anyone can check the result</h3>
+				<p>With the results, the secret arena, the grading seeds and the full leaderboard are published, so you can re-run any entry, yours included, and get the same score. If a bug in the competition code turns out to change results, it gets fixed and every entry is re-graded. Breaking the rules in section 8 disqualifies an entry. The organizer's decision is final.</p>
+			</div>
+		</section>
+
+		<!-- Prize and payout -->
+		<section class="block split" id="prize">
+			<div>
+				<p class="kick">Prize and payout</p>
+				<h2>What you win, <em>and when it arrives.</em></h2>
+				<div class="gift" aria-hidden="true">
+					<span class="gift-k">Gift card</span>
+					<span class="gift-amt">$20</span>
+					<span class="gift-s">Fastest robot &middot; Sprout Challenge</span>
+				</div>
+				<ul class="list">
+					<li><strong>One $20 gift card</strong> for the best score: Amazon, or an equivalent gift card available in your country. There are no runner-up prizes.</li>
+					<li>The <strong>top 10</strong> get a video of their run featured on @shantanu.builds.robots, credited to their handle.</li>
+					<li>A team shares the prize. If you're under 18, a parent or guardian receives it for you.</li>
+					<li>The gift card can't be exchanged for cash.</li>
+				</ul>
+			</div>
+			<div>
+				<p class="kick">How the payout works</p>
+				<ol class="timeline">
+					<li><b>30 Nov, 23:59 IST</b><span>Entries close (18:29 UTC). Every repository is cloned right then; late entries are not graded.</span></li>
+					<li><b>By 3 Dec</b><span>Results and the leaderboard on Instagram, with the arena and seeds.</span></li>
+					<li><b>The winner gets a DM</b><span>Or a message at the backup contact from the entry form. Reply with the email address the gift card should go to.</span></li>
+					<li><b>Within 14 days of the results</b><span>The gift card is sent to that email.</span></li>
+					<li><b>No reply in 14 days?</b><span>The prize goes to the next-best entry.</span></li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- Rulebook PDF -->
+		<section class="block" id="pdf">
+			<p class="kick">Rulebook PDF</p>
+			<h2>All the rules, <em>in 9 pages.</em></h2>
+			<p class="body">Read it here, or save it for later. If the PDF and the rules below ever differ, the latest version in the repository applies.</p>
+			<div class="actions">
+				<a class="btn primary" href="rulebook.pdf" target="_blank" rel="noopener">Open the PDF</a>
+				<a class="btn" href="rulebook.pdf" download="Sprout-Challenge-rulebook.pdf">Download (125 KB)</a>
+			</div>
+			<a class="pages" href="rulebook.pdf" target="_blank" rel="noopener" aria-label="Open the rulebook PDF">
+				<img src="media/rulebook-1.jpg" alt="Rulebook cover" loading="lazy" width="520" height="735">
+				<img src="media/rulebook-2.jpg" alt="Rulebook page 3: timeline and who can enter" loading="lazy" width="520" height="735">
+				<img src="media/rulebook-3.jpg" alt="Rulebook page 7: barriers and scoring" loading="lazy" width="520" height="735">
+				<img src="media/rulebook-4.jpg" alt="Rulebook page 8: what's allowed, grading and prize" loading="lazy" width="520" height="735">
+			</a>
+			<iframe class="pdf-view" src="rulebook.pdf#view=FitH" title="Sprout Challenge rulebook PDF" loading="lazy"></iframe>
+		</section>
+
+		<!-- FAQ -->
+		<section class="block" id="faq">
+			<p class="kick">Questions</p>
+			<h2>Before you ask.</h2>
+			<div class="faq">
+				<details><summary>Do I need a GPU or a powerful computer?</summary><p>No. It runs on a normal laptop. Train with anything you like; at grading time your controller gets one CPU core.</p></details>
+				<details><summary>Who can enter?</summary><p>Anyone, anywhere, of any age, unless the law where you live forbids it. If you're under 18, a parent or guardian must agree, and they receive the prize for you. One entry per person.</p></details>
+				<details><summary>Can I enter as a team?</summary><p>Yes. A team counts as one entry and shares the prize.</p></details>
+				<details><summary>Can I start from the baseline network?</summary><p>Yes. Starting from any of the examples is fine, including improving the baseline network. Otherwise the entry must be your own work.</p></details>
+				<details><summary>Does my robot see a camera image?</summary><p>No. It gets joint readings, an IMU, foot contacts, its position and heading, and a 13 &times; 7 height map of the terrain around it, like a processed lidar scan.</p></details>
+				<details><summary>What do I win?</summary><p>One $20 gift card (Amazon, or an equivalent available in your country) for the best score. The top 10 get a video of their run featured on @shantanu.builds.robots, credited to their handle.</p></details>
+				<details><summary>A rule is unclear. What do I do?</summary><p>Ask by DM before the deadline. Answers that change how a rule is read are added to the rulebook for everyone.</p></details>
+			</div>
+		</section>
+
+		<!-- Rulebook -->
+		<section class="block" id="rules">
+			<p class="kick">The rulebook</p>
+			<h2>The full rules.</h2>
+			<p class="body">The same rules as the <a href="#pdf">PDF</a>. Tap a rule to open it. If this page and the rulebook ever differ, the rulebook applies.</p>
+			<article class="rulebook">
+<!-- RULES:START -->
+<p>The Sprout Challenge celebrates 1,000 followers on Instagram (<a target="_blank" rel="noopener" href="https://www.instagram.com/shantanu.builds.robots/">@shantanu.builds.robots</a>).
+Write a controller that gets Sprout, a simulated four-legged robot, from the start line to the finish line of an
+obstacle course as fast as possible. The fastest robot wins a $20 gift card.</p>
+<p>It's a community challenge and a contest of skill: no luck draw, nothing to buy. The <strong>top 10</strong> entries get their
+runs featured on the account.</p>
+<p><strong>Contents:</strong> <a href="#1-timeline">1. Timeline</a> · <a href="#2-who-can-enter">2. Who can enter</a> ·
+<a href="#3-what-you-submit">3. What you submit</a> · <a href="#4-how-to-enter">4. How to enter</a> · <a href="#5-a-run">5. A run</a> ·
+<a href="#6-barriers-jump-or-go-around">6. Barriers</a> · <a href="#7-scoring">7. Scoring</a> · <a href="#8-whats-allowed">8. What's allowed</a> ·
+<a href="#9-grading">9. Grading</a> · <a href="#10-prize">10. Prize</a> · <a href="#11-judging-and-disputes">11. Judging and disputes</a> ·
+<a href="#12-instagram">12. Instagram</a></p>
+<p>Setting up your computer is covered in <a target="_blank" rel="noopener" href="https://github.com/shantanu-builds-robots/sprout-challenge/blob/main/INSTALL.md">INSTALL.md</a>; the robot, its sensors and the examples are in the
+<a target="_blank" rel="noopener" href="https://github.com/shantanu-builds-robots/sprout-challenge/blob/main/README.md">README</a>.</p>
+<details class="rule" id="1-timeline"><summary><h2>1. Timeline</h2></summary>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Opens</strong></td>
+<td>11 November 2026. The practice track, all the tools and the entry form are public from then.</td>
+</tr>
+<tr>
+<td><strong>Deadline</strong></td>
+<td><strong>30 November 2026, 23:59 IST (UTC+5:30)</strong>, which is 18:29 UTC. Late entries are not graded.</td>
+</tr>
+<tr>
+<td><strong>Results</strong></td>
+<td>by 3 December 2026, on Instagram. The competition arena and the grading seeds are published with the results.</td>
+</tr>
+</tbody>
+</table>
+</details><details class="rule" id="2-who-can-enter"><summary><h2>2. Who can enter</h2></summary>
+<ul>
+<li>Anyone, anywhere, of any age, unless the law where you live forbids it.</li>
+<li>If you are under 18, a parent or guardian must agree to your entry, and they receive the prize on your behalf.</li>
+<li>You must follow <a target="_blank" rel="noopener" href="https://www.instagram.com/shantanu.builds.robots/">@shantanu.builds.robots</a> on Instagram, and
+  still follow it at the deadline.</li>
+<li><strong>One entry per person.</strong> A team counts as one person and shares the prize.</li>
+</ul>
+</details><details class="rule" id="3-what-you-submit"><summary><h2>3. What you submit</h2></summary>
+<p>A <strong>submission folder</strong> containing a file named <code>controller.py</code> and anything it loads (network weights, lookup
+tables, helper modules). <code>controller.py</code> defines one subclass of <code>sprout_challenge.Controller</code>:</p>
+<pre><code class="language-python">from sprout_challenge import Controller
+
+class MyController(Controller):
+    def reset(self, info):      # once, before each run: the track's layout and the robot's limits
+        self.pose = info[&quot;default_pose&quot;]
+
+    def act(self, obs):         # 50 times a second: sensors in, 12 joint angles [rad] out
+        return self.pose.copy()
+</code></pre>
+<ul>
+<li>Load your files relative to <code>__file__</code>, not the current directory.</li>
+<li>Put the submission folder in a <strong>public GitHub repository</strong>: either as the repository itself (<code>controller.py</code> at
+  the top), or as the <strong>only</strong> folder in the repository that contains a <code>controller.py</code>.</li>
+<li>Symbolic links, <code>.pyc</code> files and <code>__pycache__</code> folders are ignored when your entry is collected. Commit the real
+  files.</li>
+<li>The whole submission folder must be under 200 MB.</li>
+</ul>
+<p>The <a target="_blank" rel="noopener" href="https://github.com/shantanu-builds-robots/sprout-challenge/blob/main/examples"><code>examples/</code></a> folder has three valid entries, from one that stands still to a neural network that
+finishes the practice track.</p>
+</details><details class="rule" id="4-how-to-enter"><summary><h2>4. How to enter</h2></summary>
+<ol>
+<li>Put your submission in a public GitHub repository (see section 3).</li>
+<li>Check it in the grading container (section 9), so you know it runs the way the judges will run it.</li>
+<li><strong>Fill in the <a target="_blank" rel="noopener" href="https://shantanu-builds-robots.github.io/ig/sprout-challenge/#submit">entry form</a></strong> (linked on the challenge page): your name, your Instagram handle, a
+   backup contact for the results (email or phone), the link to your repository, and your team members if you
+   enter as a team. If you send the form more than once, your latest response counts. The form closes at the
+   deadline.</li>
+</ol>
+<p>You may keep pushing changes until the deadline. The version that counts is <strong>the one in the repository when it is
+collected at the deadline</strong>: every entry is cloned right after 23:59 IST on 30 November, and the exact commit taken
+is recorded. Commit dates are not used. Keep the repository public until the results are out.</p>
+</details><details class="rule" id="5-a-run"><summary><h2>5. A run</h2></summary>
+<ul>
+<li>The course runs along +x and is 6 m wide. The robot starts at x = 1 m, standing in its default crouched pose,
+  facing the finish.</li>
+<li>Every 0.02 s (50 Hz) your <code>act</code> receives the robot's sensors and returns <strong>12 joint target angles</strong>. The robot's
+  position servos (stiffness 200 N·m/rad, torque limit 150 N·m) track them. Targets outside the joint limits are
+  clipped; a non-finite value keeps that joint's previous target.</li>
+<li>A run ends when the robot:</li>
+<li><strong>finishes</strong>: its torso crosses the finish line;</li>
+<li><strong>falls</strong>: its torso touches the ground, comes within 0.3 m of the terrain under it, or tilts more than 60°;</li>
+<li><strong>leaves the track</strong>: its torso comes within 0.3 m of either side;</li>
+<li>or reaches the <strong>time limit of 180 s</strong>.</li>
+<li><strong>A crashed controller doesn't stop the clock.</strong> If <code>reset</code> or <code>act</code> raises an error, returns something other than
+  12 numbers, or takes longer than 5 s to answer, the controller is stopped and the robot holds its last targets
+  until the run ends. <code>reset</code> itself may take up to 60 s.</li>
+<li><strong>Time budget:</strong> each <code>act</code> call has <strong>20 ms</strong> of wall-clock time on one CPU core of the grading machine. A late
+  answer is thrown away and the robot keeps its previous targets for that step, as a real robot would. The grader
+  counts late steps; keep well under the budget.</li>
+</ul>
+<p>The obstacles are built from these section types: flat, rough ground, stairs, hurdles, a ramp, a narrow bridge,
+waves, a trench, and barriers. Their parameters are in <a target="_blank" rel="noopener" href="https://github.com/shantanu-builds-robots/sprout-challenge/blob/main/sprout_challenge/track.py">track.py</a>.</p>
+<h3 id="what-your-controller-can-read">What your controller can read</h3>
+<p>Your controller sees only what <code>reset</code> and <code>act</code> give it; everything else about the simulation is off limits
+(section 8). All readings are exact (no sensor noise).</p>
+<p><strong>Every step, in <code>act(obs)</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Reading</th>
+<th>Size</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>time</code></td>
+<td>1</td>
+<td>seconds since the start</td>
+</tr>
+<tr>
+<td><code>joint_pos</code>, <code>joint_vel</code></td>
+<td>12 + 12</td>
+<td>joint angles [rad] and speeds [rad/s], legs in the order back-right, back-left, front-left, front-right</td>
+</tr>
+<tr>
+<td><code>gyro</code></td>
+<td>3</td>
+<td>body turn rate [rad/s] (IMU)</td>
+</tr>
+<tr>
+<td><code>accelerometer</code></td>
+<td>3</td>
+<td>body acceleration [m/s²], gravity included (IMU)</td>
+</tr>
+<tr>
+<td><code>gravity</code></td>
+<td>3</td>
+<td>which way is down, in the body frame: <code>(0, 0, -1)</code> when level</td>
+</tr>
+<tr>
+<td><code>base_lin_vel</code></td>
+<td>3</td>
+<td>body velocity [m/s], body frame, as a state estimator would give it</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>3</td>
+<td>torso centre [m]: x along the track, y across it, z up, as motion capture would give it</td>
+</tr>
+<tr>
+<td><code>yaw</code></td>
+<td>1</td>
+<td>heading [rad]; 0 faces the finish</td>
+</tr>
+<tr>
+<td><code>foot_contact</code></td>
+<td>4</td>
+<td>which feet are touching the ground</td>
+</tr>
+<tr>
+<td><code>height_scan</code></td>
+<td>13 × 7</td>
+<td>the terrain sensor (below)</td>
+</tr>
+<tr>
+<td><code>last_action</code></td>
+<td>12</td>
+<td>the joint targets applied last step</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The terrain sensor (<code>height_scan</code>)</strong> is how the robot sees the course. It is a grid of 13 × 7 terrain heights
+around the robot, from 0.8 m behind to 1.6 m ahead and 0.6 m to each side, turned with the robot's heading; each
+value is the terrain height there minus the torso's height (about −0.86 m on flat ground, less negative over a step
+or a hurdle ahead). Think of it as the height map a lidar or depth camera would build, already processed. <strong>There is
+no camera image and no raw lidar point cloud.</strong> The grid points' positions are in <code>info["scan_points"]</code>.</p>
+<p><strong>Once per run, in <code>reset(info)</code>:</strong> the control period <code>dt</code> (0.02 s), the standing pose <code>default_pose</code>, the joint
+limits <code>joint_lower</code> and <code>joint_upper</code>, <code>scan_points</code>, the finish line's position <code>finish_x</code>, the track width
+<code>track_width</code>, and <code>barriers</code>: for each barrier, where it is along and across the track, its height, its bonus and
+the centre of the open lane around it.</p>
+<p>The track's layout is not given: not the sections, their order or their sizes. Your controller finds out what's
+ahead from the terrain sensor.</p>
+</details><details class="rule" id="6-barriers-jump-or-go-around"><summary><h2>6. Barriers: jump or go around</h2></summary>
+<p>At a barrier the track forks. A solid block covers one side of the track and the centreline; a lane about 2.5 m
+wide stays open on the other side. Your controller learns where each barrier is, how tall it is, which side is open
+and what bonus it gives from <code>info["barriers"]</code> in <code>reset</code>.</p>
+<ul>
+<li><strong>Over cleanly:</strong> the torso passes over the barrier and <strong>no part of the robot touches it</strong> (its top, or any face
+  above the ground). You earn the barrier's bonus: <strong>5 s off your finish time</strong> on the practice track.</li>
+<li><strong>Around:</strong> walk through the open lane. No bonus, no penalty.</li>
+<li><strong>Touched:</strong> climbing onto the barrier, kicking it, or clipping it with a leg on the way over doesn't end the run,
+  but earns no bonus.</li>
+</ul>
+<p>The route is decided where the torso passes the middle of the barrier. Bonuses count only if you finish.</p>
+</details><details class="rule" id="7-scoring"><summary><h2>7. Scoring</h2></summary>
+<ul>
+<li>Each entry runs <strong>5 times</strong> on the competition arena. The robot is the same in every run (no change to friction,
+  mass or motor strength); only its start moves a little: up to 5 cm sideways and 3° in heading, always facing the
+  finish, from seeds only the organiser knows.</li>
+<li><strong>Every entry gets the same 5 runs.</strong> Run 1 starts from the same spot for everyone, and so on, so nobody gets
+  luckier starts than anyone else.</li>
+<li>A run that <strong>finishes</strong> scores its <strong>finish time minus its barrier bonuses</strong>; lower is better.</li>
+<li>A run that <strong>doesn't finish</strong> scores the <strong>distance</strong> its torso got along the track; further is better.</li>
+<li><strong>Any finish beats any non-finish.</strong></li>
+<li>An entry's score is its <strong>median run</strong>: the 3rd best of the 5.</li>
+<li><strong>Lowest median score wins.</strong> A tie is broken by the better average over all 5 runs, where a run that didn't
+  finish counts as 180 s plus the distance it had left.</li>
+</ul>
+<h3 id="the-competition-arena">The competition arena</h3>
+<p>The arena is <strong>secret</strong> until the results. It has <strong>exactly the same sections as the practice track</strong>
+(<a target="_blank" rel="noopener" href="https://github.com/shantanu-builds-robots/sprout-challenge/blob/main/sprout_challenge/tracks/practice.yaml">tracks/practice.yaml</a>), with the same sizes and the same single barrier,
+<strong>in a different order</strong>. A controller that handles every section of the practice track, whatever comes before or
+after it, is ready for the arena.</p>
+<p>To check that, practise on reordered tracks: copy <code>practice.yaml</code>, shuffle its sections, and grade on your copy. The
+track generator makes other variations too:</p>
+<pre><code class="language-bash">python -m sprout_challenge.track --seed 7 --difficulty 0.8 --out my_track.yaml
+</code></pre>
+<p>A controller that counts on the order of the practice track (for example, "stairs come after 11 m") will fail on
+the arena; one that reads the terrain scan and <code>info["barriers"]</code> will not.</p>
+</details><details class="rule" id="8-whats-allowed"><summary><h2>8. What's allowed</h2></summary>
+<ul>
+<li><strong>Any control method:</strong> a hand-written gait, PID, model-predictive control, reinforcement learning, imitation,
+  optimisation, or a mix. Train however and wherever you like; no GPU is needed.</li>
+<li><strong>Starting from the examples is fine,</strong> including improving the baseline network. Otherwise the entry must be
+  your own work.</li>
+<li>At grading time your code may use the <strong>Python standard library, numpy, scipy, onnxruntime and this package</strong>.
+  Bundle anything else inside your folder, as pure Python. To use a network trained with PyTorch, JAX or similar,
+  export it, for example to ONNX or to numpy arrays.</li>
+<li>There is <strong>no network access</strong> during grading, and memory is limited to 2 GB.</li>
+</ul>
+<p><strong>Not allowed</strong> (the entry is disqualified):</p>
+<ul>
+<li>Reading the simulator's state, or anything about the run, other than what <code>reset</code> and <code>act</code> receive (section 5).</li>
+<li>Interfering with the grader, its timing, its files, or other entries.</li>
+<li>Trying to find out the secret arena or seeds before the results.</li>
+<li>Entering someone else's work as your own, or more than one entry per person.</li>
+</ul>
+</details><details class="rule" id="9-grading"><summary><h2>9. Grading</h2></summary>
+<p>Every entry is graded the same way, on the organiser's machine, in the Docker image built from
+<a target="_blank" rel="noopener" href="https://github.com/shantanu-builds-robots/sprout-challenge/blob/main/docker/Dockerfile">docker/Dockerfile</a>: Python 3.11, no network, 1 CPU core, 2 GB of memory. You can run exactly the
+same container yourself, on the practice track or on any track you generate:</p>
+<pre><code class="language-bash">docker build -f docker/Dockerfile -t sprout-challenge .
+docker run --rm --network none --cpus 1 --memory 2g -v &quot;$PWD/my_entry&quot;:/submission/my_entry:ro sprout-challenge \
+    python -m sprout_challenge.grade /submission/my_entry --track practice
+</code></pre>
+<p>If your entry works with <code>python -m sprout_challenge.grade</code> on your computer but fails in the container, the
+container's result is the one that counts.</p>
+</details><details class="rule" id="10-prize"><summary><h2>10. Prize</h2></summary>
+<ul>
+<li><strong>One $20 gift card</strong> (Amazon, or an equivalent gift card available in the winner's country) for the entry with
+  the best score on the competition arena. There are no runner-up prizes.</li>
+<li>The winner is announced on Instagram and contacted by DM, or at the backup contact from the entry form if a DM
+  gets no answer. The gift card is sent within 14 days of the results, to an email address the winner gives.</li>
+<li>If the winner doesn't reply within 14 days of being contacted, the prize goes to the next-best entry.</li>
+<li>The prize can't be exchanged for cash.</li>
+<li>The <strong>top 10</strong> entries on the leaderboard get a video of their run featured on
+  <a target="_blank" rel="noopener" href="https://www.instagram.com/shantanu.builds.robots/">@shantanu.builds.robots</a>, credited to their Instagram handle.</li>
+</ul>
+</details><details class="rule" id="11-judging-and-disputes"><summary><h2>11. Judging and disputes</h2></summary>
+<ul>
+<li>The organiser grades every entry with <code>scripts/grade_all.sh</code> on the arena and the secret seeds, and publishes the
+  leaderboard, the arena and the seeds with the results, so anyone can re-run any entry and check its score.</li>
+<li>If a bug in the competition code turns out to change results, the organiser may fix it and re-grade every entry.</li>
+<li>If a rule is unclear, ask by DM before the deadline. Answers that change how a rule is read are added to this file
+  for everyone.</li>
+<li>The organiser's decision is final.</li>
+<li>By entering you agree that your entry, your Instagram handle, your score and videos of your robot's runs may be
+  published.</li>
+</ul>
+</details><details class="rule" id="12-instagram"><summary><h2>12. Instagram</h2></summary>
+<p>This competition is not sponsored, endorsed or administered by, or associated with, Instagram or Meta. By entering,
+you release Instagram and Meta from any responsibility for it. Questions go to
+<a target="_blank" rel="noopener" href="https://www.instagram.com/shantanu.builds.robots/">@shantanu.builds.robots</a>, not to Instagram.</p></details>
+<!-- RULES:END -->
+			</article>
+		</section>
+
+		<!-- Final CTA -->
+		<section class="cta">
+			<h2>Can your code <em>beat 61.9 s?</em></h2>
+			<p>Send this to the friend you'd race.</p>
+			<div class="actions center">
+				<a class="btn primary" href="https://github.com/shantanu-builds-robots/sprout-challenge" target="_blank" rel="noopener">Get the code</a>
+				<button type="button" class="btn" id="share">Share this challenge</button>
+			</div>
+		</section>
+	</main>
+
+	<footer class="foot">
+		<p>Run by <a href="https://www.instagram.com/shantanu.builds.robots/" target="_blank" rel="noopener">@shantanu.builds.robots</a>. Sprout's model comes from <a href="https://github.com/shantanu-builds-robots/sprout-gym" target="_blank" rel="noopener">sprout-gym</a>.</p>
+		<p>This competition is not sponsored, endorsed or administered by, or associated with, Instagram or Meta.</p>
+	</footer>
+
+	<script src="challenge.js" defer></script>
+</body>
+</html>
